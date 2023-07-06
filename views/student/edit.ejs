@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student Data</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="rounded border border-primary">
+        <h1>Edit Student details</h1>
+        <form action="/student/<%=student._id%>?_method=PUT" method='POST'>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" required value="<%=student.name%>"><br>
+            <label for="reg">Registration Number</label>
+            <input type="text" name="regNo" id="reg" placeholder="Reg no" required value="<%=student.regNo%>"><br>
+            <label for="clg">College</label>
+            <input type="text" name="college" id="clg" placeholder="College" required value="<%=student.college%>"><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required value="<%=student.email%>"><br>
+            <label for="ph">Phone Number</label>
+            <input type="tel" name="phoneNo" id="ph " placeholder="Phone Number" maxlength="10" minlength="10" value="<%=student.phoneNo%>"><br>
+            <button class="btn wi btn-outline-primary">Submit</button>
+        </form>
+        <a href="/student/<%=student._id%>"><button class="btn wi btn-outline-primary">Cancel</button></a>
+    </div>
+</body>
+
+</html>

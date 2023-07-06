@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Student</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="rounded border border-primary">
+        <h1>New Student details</h1>
+        <form action="/student" method='POST'>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" required><br>
+            <label for="reg">Registration Number</label>
+            <input type="text" name="regNo" id="reg" placeholder="Reg no" required><br>
+            <label for="clg">College</label>
+            <input type="text" name="college" id="clg" placeholder="College" required><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required><br>
+            <label for="ph">Phone Number</label>
+            <input type="tel" name="phoneNo" id="ph " placeholder="Phone Number" maxlength="10" minlength="10"><br>
+            <button class="btn wi btn-outline-primary">Submit</button>
+        </form>
+        <a href="/student"><button class="btn wi btn-outline-primary">Back</button></a>
+    </div>
+</body>
+
+</html>

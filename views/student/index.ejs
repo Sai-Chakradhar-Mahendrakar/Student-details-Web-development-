@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= student.name %>
+    </title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="rounded border border-primary">
+        <h1 id="longName">
+            <%= student.name %>
+        </h1>
+
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action">Registration Number:
+                <%= student.regNo %>
+            </li>
+            <li class="list-group-item list-group-item-action">College:
+                <%= student.college%>
+            </li>
+            <li class="list-group-item list-group-item-action">Email:
+                <%=student.email%>
+            </li>
+            <li class="list-group-item list-group-item-action">Phone Number:
+                <%=student.phoneNo %>
+            </li>
+        </ul>
+
+
+        <a href="/student/<%= student._id %>/edit"><button class="btn wi btn-outline-primary">Edit</button></a>
+        <form action="/student/<%=student._id%>?_method=DELETE" method="POST">
+            <button class="btn wi btn-outline-primary">Delete</button>
+        </form>
+        <a href="/student"><button class="btn wi btn-outline-primary">All Students</button></a>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
